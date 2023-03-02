@@ -43,6 +43,7 @@ void tree_preorder(const binary_tree_t *tree, void (*func)(const binary_tree_t *
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
 	int res = 0;
+
 	if (tree)
 		tree_preorder(tree, &leaves_count);
 	res = sum;

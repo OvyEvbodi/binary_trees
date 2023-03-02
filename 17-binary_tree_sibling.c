@@ -5,8 +5,8 @@
  * @tree: a pointer to the node to find the sibling
  *
  * Return: a pointer to the sibling node,
- * or NULL, if node is NULL, the parent is NULL node has no sibling
-*/
+ * or NULL, if node is NULL, the parent is NULL, or node has no sibling
+ */
 
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {

@@ -7,6 +7,8 @@
 #include <stddef.h>
 
 #define FAIL return (NULL)
+#define FULL 1
+#define FREE 0
 
 /* Global variable */
 extern int sum;
@@ -56,8 +58,14 @@ size_t binary_tree_size(const binary_tree_t *tree);
 size_t binary_tree_leaves(const binary_tree_t *tree);
 size_t binary_tree_nodes(const binary_tree_t *tree);
 
+int binary_tree_is_full(const binary_tree_t *tree);
+
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+
 void tree_preorder(const binary_tree_t *tree, void (*func)(const binary_tree_t *));
+int full_tree_preorder(const binary_tree_t *tree, int (*func)(const binary_tree_t *));
 void leaves_count(const binary_tree_t *node);
 void nodes_count(const binary_tree_t *node);
+int full_tree(const binary_tree_t *tree);
 
 #endif /* BINARY_TREES_H */

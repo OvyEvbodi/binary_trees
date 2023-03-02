@@ -64,7 +64,6 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
 void tree_preorder(const binary_tree_t *tree, void (*func)(const binary_tree_t *));
-int full_tree_preorder(const binary_tree_t *tree, int (*func)(const binary_tree_t *));
 void leaves_count(const binary_tree_t *node);
 void nodes_count(const binary_tree_t *node);
 int full_tree(const binary_tree_t *tree);

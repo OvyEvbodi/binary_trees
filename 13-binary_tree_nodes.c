@@ -13,6 +13,7 @@ int sum = 0;
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
 	int res = 0;
+
 	if (tree)
 		tree_preorder(tree, &nodes_count);
 	res = sum;
@@ -22,7 +23,7 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
 
 /**
  * nodes_count - counts the nodes in a binary tree
- * @tree: a pointer to the root node of the tree
+ * @node: a pointer to the root node of the tree
  *
  * Return: void
  */
@@ -40,7 +41,8 @@ void nodes_count(const binary_tree_t *node)
  *
  * Return: void
  */
-void tree_preorder(const binary_tree_t *tree, void (*func)(const binary_tree_t *))
+void tree_preorder(const binary_tree_t *tree,
+	void (*func)(const binary_tree_t *))
 {
 	if (tree)
 	{

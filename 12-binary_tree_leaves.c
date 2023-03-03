@@ -4,7 +4,7 @@ int sum = 0;
 
 /**
  * leaves_count - counts the leaves in a binary tree
- * @tree: a pointer to the root node of the tree
+ * @node: a pointer to the root node of the tree
  *
  * Return: void
  */
@@ -22,7 +22,8 @@ void leaves_count(const binary_tree_t *node)
  *
  * Return: void
  */
-void tree_preorder(const binary_tree_t *tree, void (*func)(const binary_tree_t *))
+void tree_preorder(const binary_tree_t *tree,
+	void (*func)(const binary_tree_t *))
 {
 	if (tree)
 	{

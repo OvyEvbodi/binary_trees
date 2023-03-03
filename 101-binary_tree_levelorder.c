@@ -4,7 +4,7 @@
 /**
  * _push - pushes a new node on to the queue
  * @queue: a pointer to the top of the queue
- * @data: the data to be pushed on to the queue
+ * @tree: the data to be pushed on to the queue
  *
  * Return: void
  */
@@ -26,7 +26,7 @@ void _push(queue_t **queue, const binary_tree_t *tree)
 		new = malloc(sizeof(queue_t));
 		if (!new)
 			free_queue(queue);
-        	new->tree = tree;
+		new->tree = tree;
 		temp = *queue;
 		while (temp->next)
 			temp = temp->next;
@@ -110,7 +110,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	queue_t *queue = NULL;
 
-	if (tree)
+	if (tree && func)
 	{
 		_push(&queue, tree);
 

@@ -25,10 +25,10 @@ extern int sum;
  */
 struct binary_tree_s
 {
-    int n;
-    struct binary_tree_s *parent;
-    struct binary_tree_s *left;
-    struct binary_tree_s *right;
+	int n;
+	struct binary_tree_s *parent;
+	struct binary_tree_s *left;
+	struct binary_tree_s *right;
 };
 typedef struct binary_tree_s binary_tree_t;
 
@@ -66,7 +66,8 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
-void tree_preorder(const binary_tree_t *tree, void (*func)(const binary_tree_t *));
+void tree_preorder(const binary_tree_t *tree,
+	void (*func)(const binary_tree_t *));
 void leaves_count(const binary_tree_t *node);
 void nodes_count(const binary_tree_t *node);
 int full_tree(const binary_tree_t *tree);

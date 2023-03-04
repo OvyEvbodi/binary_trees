@@ -14,16 +14,12 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 {
 	if (!first || !second)
 		FAIL;
-	if (first == second)
+	if (first == second || (second->parent && second->parent == first))
 		return ((binary_tree_t *)first);
 	if (first->parent && first->parent == second)
-		return (first->parent);
-	if (second->parent && second->parent == first)
-		return (second->parent);
+		return ((binary_tree_t *)second);
 	if (first->parent && second->parent)
-	{
 		return (first->parent == second->parent ? first->parent :
 			binary_trees_ancestor(first->parent, second->parent));
-	}
 	FAIL;
 }
